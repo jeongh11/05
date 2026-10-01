@@ -4,21 +4,19 @@ int main(void)
 {
     int num;
 
-    printf("정수를 하나 입력하시오: ");
+    printf("정수 하나를 입력하시오: ");
     scanf("%d", &num);
 
-    if (num > 0)
+    if (num < 0)
     {
-        printf("양수입니다.\n");
-    }
-    else if (num < 0)
-    {
-        printf("음수입니다.\n");
+        num = -num;
     }
     else
     {
-        printf("0입니다.\n");
+        num = num;
     }
+
+    printf("절대값은 %d입니다.\n", num);
 
     return 0;
 }
